@@ -24,6 +24,7 @@ class PostController extends Controller
             'title' => "required|max:255",
             'body' => "required"
         ]);
+        
 
         return 'okay';
     }
