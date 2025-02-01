@@ -22,7 +22,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        Gate::authorize('modify', $request->user()->posts());
+        // Gate::authorize('modify', $request->user()->posts());
 
 
         $fields = request()->validate([
@@ -49,7 +49,7 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        Gate::authorize('modify', $post);
+        // Gate::authorize('modify', $post);
 
         $fields = request()->validate([
             'title' => "required|max:255",
@@ -67,7 +67,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        Gate::authorize('modify', $post);
+        // Gate::authorize('modify', $post);
 
         $post->delete();
 
